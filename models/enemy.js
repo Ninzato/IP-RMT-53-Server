@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Name is required!",
@@ -26,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       health: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Health is required!",
@@ -37,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       damage: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Damage is required!",
@@ -51,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       type: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Type is required!",

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       characterId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "characterId is required!",
@@ -26,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       difficulty: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Difficulty is required!",
@@ -37,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       status: {
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
           notNull: {
             msg: "Status is required!",
