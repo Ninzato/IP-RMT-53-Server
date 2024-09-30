@@ -9,6 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Enemy.hasMany(models.Battle, {
+        foreignKey: "enemyId",
+        onDelete: "CASCADE",
+      });
     }
   }
   Enemy.init(

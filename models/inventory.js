@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Inventory.belongsTo(models.Character, {
+        foreignKey: "characterId",
+        onDelete: "CASCADE",
+      });
+      Inventory.belongsTo(models.Item, {
+        foreignKey: "itemId",
+        onDelete: "CASCADE",
+      });
     }
   }
   Inventory.init(
