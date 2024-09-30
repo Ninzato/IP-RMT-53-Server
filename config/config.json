@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "belajarduluyagesya",
+    "database": "druis-elor-vendur",
+    "host": "localhost",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "postgres",
+    "password": "belajarduluyagesya",
+    "database": "druis-elor-vendur-test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}
