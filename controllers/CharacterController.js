@@ -3,6 +3,26 @@ const { generateBackstory } = require("../helpers/backstoryGenerator");
 const { assignRandomSkills } = require("../helpers/skillAssigner");
 
 class CharacterController {
+  static async getCharacters(req, res, next) {
+    try {
+      const characters = await Character.findAll();
+
+      res.status(200).json(characters);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async getCharacterById(req, res, next) {
+    try {
+      const character = await Character.findByPk(req.params.id);
+
+      res.status(200).json(character);
+    } catch (err) {
+      next(err);
+    }
+  }
+
   static async createCharacter(req, res, next) {
     const { name, race, occupation } = req.body;
     try {
