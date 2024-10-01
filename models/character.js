@@ -13,6 +13,14 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "userId",
         onDelete: "CASCADE",
       });
+      Character.belongsTo(models.Race, {
+        foreignKey: "raceId",
+        onDelete: "CASCADE",
+      });
+      Character.belongsTo(models.Occupation, {
+        foreignKey: "occupationId",
+        onDelete: "CASCADE",
+      });
       Character.hasMany(models.Adventure, {
         foreignKey: "characterId",
         onDelete: "CASCADE",
@@ -53,7 +61,7 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
-      race: {
+      raceId: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -65,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
-      occupation: {
+      occupationId: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {

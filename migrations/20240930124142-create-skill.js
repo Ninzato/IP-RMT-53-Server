@@ -2,46 +2,28 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Characters", {
+    await queryInterface.createTable("Skills", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      userId: {
+      index: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Users",
-          key: "id",
-        },
+        type: Sequelize.STRING,
       },
       name: {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      raceId: {
+      effect: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Races",
-          key: "id",
-        },
-      },
-      occupationId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Occupations",
-          key: "id",
-        },
-      },
-      backstory: {
-        type: Sequelize.TEXT,
-      },
-      skills: {
         type: Sequelize.JSONB,
+      },
+      classes: {
+        allowNull: false,
+        type: Sequelize.ARRAY(Sequelize.STRING),
       },
       createdAt: {
         allowNull: false,
@@ -54,6 +36,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Characters");
+    await queryInterface.dropTable("Skills");
   },
 };
