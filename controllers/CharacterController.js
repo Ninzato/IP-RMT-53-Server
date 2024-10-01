@@ -1,4 +1,4 @@
-const { Character } = require("../models");
+const { Character, Race, Occupation } = require("../models");
 const { generateBackstory } = require("../helpers/backstoryGenerator");
 const { assignRandomSkills } = require("../helpers/skillAssigner");
 
@@ -24,16 +24,22 @@ class CharacterController {
   }
 
   static async createCharacter(req, res, next) {
-    const { name, race, occupation } = req.body;
+    const { name, raceId, occupationId } = req.body;
     try {
-      const backstory = await generateBackstory(name, race, occupation);
+      const race = await Race.findByPk(raceId);
+      const occupation = await Occupation.findByPk(occupationId);
+      const backstory = await generateBackstory(
+        name,
+        race.name,
+        occupation.name
+      );
       const skills = await assignRandomSkills();
 
       const character = await Character.create({
         userId: req.user.id,
         name,
-        race,
-        occupation,
+        raceId,
+        occupationId,
         backstory,
         skills,
       });

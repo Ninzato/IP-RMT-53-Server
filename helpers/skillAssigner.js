@@ -1,26 +1,32 @@
 const { instance } = require("../helpers/axios");
+const { Skill } = require("../models");
+const { Op } = require("sequelize");
 
 // Fetch data from DnD Api to give user random starter skill
 async function assignRandomSkills() {
   try {
     // Get all spells
-    const { data } = await instance({
-      method: "GET",
-      url: "/api/spells",
+    const skills = await Skill.findAll({
+      where: {
+        classes: {
+          [Op.contains]: ["cleric"],
+        },
+        level: 1,
+      },
     });
 
     // ? console.log(allSpellsResponse.data.results, "<<<<");
 
     // Assign 2 random spells from the list
-    const randomSpells = [];
+    const randomSkills = [];
     for (let i = 0; i < 2; i++) {
-      const randomIndex = Math.floor(Math.random() * data.results.length);
-      randomSpells.push(data.results[randomIndex]);
+      const randomIndex = Math.floor(Math.random() * skills.length);
+      randomSkills.push(skills[randomIndex]);
       // Remove the selected spell to avoid duplicates
-      data.results.splice(randomIndex, 1);
+      skills.splice(randomIndex, 1);
     }
 
-    return randomSpells;
+    return randomSkills;
   } catch (err) {
     console.error("Error fetching spells:", err);
     throw err;
