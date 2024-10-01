@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Goblin Warrior",
+    "health": 150,
+    "type": "mob"
+  },
+  {
+    "name": "Skeleton Archer",
+    "health": 120,
+    "type": "mob"
+  },
+  {
+    "name": "Zombie Brute",
+    "health": 180,
+    "type": "mob"
+  },
+  {
+    "name": "Orc Berserker",
+    "health": 200,
+    "type": "mob"
+  },
+  {
+    "name": "Vampire Bat",
+    "health": 100,
+    "type": "mob"
+  },
+  {
+    "name": "Troll",
+    "health": 175,
+    "type": "mob"
+  },
+  {
+    "name": "Bandit Leader",
+    "health": 160,
+    "type": "mob"
+  },
+  {
+    "name": "Werewolf",
+    "health": 190,
+    "type": "mob"
+  },
+  {
+    "name": "Dragon Lord",
+    "health": 250,
+    "type": "boss"
+  },
+  {
+    "name": "Demon Overlord",
+    "health": 300,
+    "type": "boss"
+  }
+]
