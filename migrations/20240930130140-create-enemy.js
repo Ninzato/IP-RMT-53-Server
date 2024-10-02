@@ -17,13 +17,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      damage: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      skills: {
-        type: Sequelize.JSONB,
-      },
       type: {
         allowNull: false,
         type: Sequelize.STRING,

@@ -41,21 +41,6 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
-      damage: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: "Damage is required!",
-          },
-          notEmpty: {
-            msg: "Damage is required!",
-          },
-        },
-      },
-      skills: {
-        type: DataTypes.JSONB,
-      },
       type: {
         type: DataTypes.STRING,
         allowNull: false,

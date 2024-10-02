@@ -66,10 +66,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notNull: {
-            msg: "Race is required!",
+            msg: "raceId is required!",
           },
           notEmpty: {
-            msg: "Race is required!",
+            msg: "raceId is required!",
           },
         },
       },
@@ -78,12 +78,20 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notNull: {
-            msg: "Occupation is required!",
+            msg: "OccupationId is required!",
           },
           notEmpty: {
-            msg: "Occupation is required!",
+            msg: "OccupationId is required!",
           },
         },
+      },
+      health: {
+        type: DataTypes.INTEGER,
+        defaultValue: 100,
+      },
+      armor: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
       },
       backstory: {
         type: DataTypes.TEXT,

@@ -33,6 +33,18 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      enemies: {
+        type: DataTypes.JSONB,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Enemies is required!",
+          },
+          notEmpty: {
+            msg: "Enemies is required!",
+          },
+        },
+      },
       difficulty: {
         type: DataTypes.STRING,
         allowNull: false,

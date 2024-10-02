@@ -17,6 +17,10 @@ module.exports = {
           key: "id",
         },
       },
+      enemies: {
+        allowNull: false,
+        type: Sequelize.JSONB,
+      },
       difficulty: {
         allowNull: false,
         type: Sequelize.STRING,

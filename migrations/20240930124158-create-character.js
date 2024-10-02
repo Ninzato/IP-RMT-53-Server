@@ -37,6 +37,14 @@ module.exports = {
           key: "id",
         },
       },
+      health: {
+        type: Sequelize.INTEGER,
+        defaultValue: 100,
+      },
+      armor: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
       backstory: {
         type: Sequelize.TEXT,
       },

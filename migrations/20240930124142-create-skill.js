@@ -17,6 +17,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      level: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
       effect: {
         allowNull: false,
         type: Sequelize.JSONB,

@@ -37,6 +37,18 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      level: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Level is required!",
+          },
+          notEmpty: {
+            msg: "Level is required!",
+          },
+        },
+      },
       effect: {
         type: DataTypes.JSONB,
         allowNull: false,
