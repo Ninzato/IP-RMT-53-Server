@@ -36,7 +36,7 @@ class AuthController {
 
       const access_token = generateToken(user);
 
-      res.status(200).json({ access_token });
+      res.status(200).json({ access_token, id: user.id });
     } catch (err) {
       next(err);
     }

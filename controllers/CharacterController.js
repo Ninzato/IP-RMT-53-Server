@@ -15,7 +15,11 @@ class CharacterController {
 
   static async getCharacterById(req, res, next) {
     try {
-      const character = await Character.findByPk(req.params.id);
+      const character = await Character.findOne({
+        where: {
+          userId: req.params.id,
+        },
+      });
 
       res.status(200).json(character);
     } catch (err) {
