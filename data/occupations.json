@@ -1,9 +1,5 @@
 [
   {
-    "index": "barbarian",
-    "name": "Barbarian"
-  },
-  {
     "index": "bard",
     "name": "Bard"
   },
@@ -15,14 +11,7 @@
     "index": "druid",
     "name": "Druid"
   },
-  {
-    "index": "fighter",
-    "name": "Fighter"
-  },
-  {
-    "index": "monk",
-    "name": "Monk"
-  },
+
   {
     "index": "paladin",
     "name": "Paladin"
@@ -31,10 +20,7 @@
     "index": "ranger",
     "name": "Ranger"
   },
-  {
-    "index": "rogue",
-    "name": "Rogue"
-  },
+
   {
     "index": "sorcerer",
     "name": "Sorcerer"
