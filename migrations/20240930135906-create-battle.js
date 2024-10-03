@@ -9,14 +9,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      adventureId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Adventures",
-          key: "id",
-        },
-      },
       characterId: {
         allowNull: false,
         type: Sequelize.INTEGER,

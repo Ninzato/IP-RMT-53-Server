@@ -25,18 +25,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Battle.init(
     {
-      adventureId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          notNull: {
-            msg: "adventureId is required!",
-          },
-          notEmpty: {
-            msg: "adventureId is required!",
-          },
-        },
-      },
       characterId: {
         type: DataTypes.INTEGER,
         allowNull: false,
