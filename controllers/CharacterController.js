@@ -34,8 +34,8 @@ class CharacterController {
       const occupation = await Occupation.findByPk(occupationId);
       const backstory = await generateBackstory(
         name,
-        race.name,
-        occupation.name
+        race?.name,
+        occupation?.name
       );
       const skills = await assignRandomSkills();
 
@@ -63,7 +63,7 @@ class CharacterController {
           message: `The character that you want to delete does not exist!`,
         };
 
-      await character.destroy();
+      // await character.destroy();
 
       res.status(200).json({
         message: "Successfully delete a character",
