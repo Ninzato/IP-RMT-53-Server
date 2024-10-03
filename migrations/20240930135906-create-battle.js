@@ -27,7 +27,7 @@ module.exports = {
       },
       turn: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       characterHealth: {
         allowNull: false,

@@ -9,10 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Battle.belongsTo(models.Adventure, {
-        foreignKey: "adventureId",
-        onDelete: "CASCADE",
-      });
+
       Battle.belongsTo(models.Character, {
         foreignKey: "characterId",
         onDelete: "CASCADE",
@@ -50,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       turn: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notNull: {

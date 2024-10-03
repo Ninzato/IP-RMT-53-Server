@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "characterId",
         onDelete: "CASCADE",
       });
-      Adventure.hasMany(models.Battle, {
-        foreignKey: "adventureId",
-        onDelete: "CASCADE",
-      });
+      // Adventure.hasMany(models.Battle, {
+      //   foreignKey: "adventureId",
+      //   onDelete: "CASCADE",
+      // });
     }
   }
   Adventure.init(
