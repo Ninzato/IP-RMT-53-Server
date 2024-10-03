@@ -10,7 +10,6 @@ const router = require("./routes");
 app.use(
   cors({
     origin: "*",
-    allowedHeaders: ["Authorization", "Content-Type"],
   })
 );
 app.use(express.json());
