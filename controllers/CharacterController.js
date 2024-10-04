@@ -63,7 +63,7 @@ class CharacterController {
           message: `The character that you want to delete does not exist!`,
         };
 
-      // await character.destroy();
+      await character.destroy();
 
       res.status(200).json({
         message: "Successfully delete a character",
