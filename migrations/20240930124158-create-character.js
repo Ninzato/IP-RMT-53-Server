@@ -16,6 +16,7 @@ module.exports = {
           model: "Users",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       name: {
         allowNull: false,
@@ -28,6 +29,7 @@ module.exports = {
           model: "Races",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       occupationId: {
         allowNull: false,
@@ -36,6 +38,7 @@ module.exports = {
           model: "Occupations",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       health: {
         type: Sequelize.INTEGER,

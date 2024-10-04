@@ -16,6 +16,7 @@ module.exports = {
           model: "Characters",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       enemies: {
         allowNull: false,

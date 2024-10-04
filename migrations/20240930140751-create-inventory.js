@@ -16,6 +16,7 @@ module.exports = {
           model: "Characters",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       itemId: {
         allowNull: false,
@@ -24,6 +25,7 @@ module.exports = {
           model: "Items",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       quantity: {
         allowNull: false,

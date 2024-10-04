@@ -16,6 +16,7 @@ module.exports = {
           model: "Characters",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       enemyId: {
         allowNull: false,
@@ -24,6 +25,7 @@ module.exports = {
           model: "Enemies",
           key: "id",
         },
+        onDelete: "CASCADE",
       },
       turn: {
         allowNull: false,

@@ -12,7 +12,7 @@ exports.errorHandler = async function (err, req, res, next) {
   if (err.name == "SequelizeForeignKeyConstraintError") {
     return res.status(400).json({
       status: "fail",
-      message: "Author / Category you choose does not exist!",
+      message: "Foreign key constraint violation!",
     });
   }
 
